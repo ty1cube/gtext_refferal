@@ -90,11 +90,11 @@
         </a>
         <div class="dropdown-menu dropdown-menu-right">
           <div class="dropdown-header text-center">
-            <strong>Account</strong>
+            <strong>{ User Full Name}</strong>
           </div>
-          <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="badge badge-info">42</span></a>
-          <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> Messages<span class="badge badge-success">42</span></a>
-          <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="badge badge-danger">42</span></a>
+          <a class="dropdown-item" href="#"><i class="fa fa-credit-card"></i> Account Details</a>
+          <a class="dropdown-item" href="#"><i class="fa fa-shopping-cart"></i> Product</a>
+          <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Edit Profile</a>
           <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="badge badge-warning">42</span></a>
           <div class="dropdown-header text-center">
             <strong>Settings</strong>

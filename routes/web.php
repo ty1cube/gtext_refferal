@@ -12,3 +12,6 @@
 */
 
 Route::view('/', 'master', ['as'=> 'login']);
+Route::view('/add-products', 'addProducts', ['as'=> 'addProducts']);
+Route::view('/find-products', 'findProducts', ['as'=> 'findProducts']);
+Route::view('/dashboard', 'dashboard', ['as'=> 'dashboard']);

@@ -1,9 +1,35 @@
 @extends('master')
+@section('head')
+    <style>
+        .categories {
+            position: static;
+            min-width: 100%;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+        }
+    </style>
+@endsection
 @section('main')
-    <div class="row">
-        <div style="margin: 30px 0 10px 0!important; text-align: center" align="center"><h2>Your Statistics </h2></div><br />
+    <div class="card">
+        <div class="card-header">
+            Line Chart
+            <div class="card-actions">
+                <a href="http://www.chartjs.org">
+                    <small class="text-muted">docs</small>
+                </a>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="chart-wrapper">
+                <canvas id="canvas-1"></canvas>
+            </div>
+        </div>
     </div>
-    <div class="row">
+    <div class="row" style="padding: 0 100px">
+        <div style="margin: 30px 0 10px 0!important"><h2>Your Statistics </h2></div><br />
+    </div>
+    <div class="row" style="padding: 0 100px">
         <div class="col-sm-6 col-lg-3">
             <div class="social-box">
                 <br />
@@ -22,7 +48,6 @@
                 </ul>
 
             </div>
-            <!--/.social-box-->
         </div>
         <div class="col-sm-6 col-lg-3">
             <div class="social-box">
@@ -42,7 +67,6 @@
                 </ul>
 
             </div>
-            <!--/.social-box-->
         </div>
         <div class="col-sm-6 col-lg-3">
             <div class="social-box">
@@ -62,7 +86,6 @@
                 </ul>
 
             </div>
-            <!--/.social-box-->
         </div>
         <div class="col-sm-6 col-lg-3">
             <div class="social-box">
@@ -82,10 +105,23 @@
                 </ul>
 
             </div>
-            <!--/.social-box-->
+        </div>
+    </div>
+
+    <div class="row">
+        <div style="margin: 80px 0 10px 0!important; text-align: center" align="center"><h2>Categories </h2></div><br />
+    </div>
+        <div class="categories" style="position: static; min-width: 100%; overflow-x: scroll; overflow-y: hidden; white-space: nowrap">
+            <div class="card bg-primary" style="display: inline-flex; width: 200px; height: 200px; text-align: center; font-size: xx-large; margin: 4px; padding: 50px">Content</div>
+            <div class="card bg-light" style="display: inline-flex; width: 200px; height: 200px; text-align: center; font-size: xx-large; margin: 4px; padding: 50px">Content</div>
+            <div class="card bg-danger" style="display: inline-flex; width: 200px; height: 200px; text-align: center; font-size: xx-large; margin: 4px; padding: 50px">Content</div>
+            <div class="card bg-info" style="display: inline-flex; width: 200px; height: 200px; text-align: center; font-size: xx-large; margin: 4px; padding: 50px">Content</div>
+            <div class="card bg-dark" style="display: inline-flex; width: 200px; height: 200px; text-align: center; font-size: xx-large; margin: 4px; padding: 50px">Content</div>
+            <div class="card bg-warning" style="display: inline-flex; width: 200px; height: 200px; text-align: center; font-size: xx-large; margin: 4px; padding: 50px">Content</div>
         </div>
 
-        <div style="margin: 30px 0 10px 0!important; text-align: center" align="center"><h2>Product List</h2></div>
+    <div class="row" style="padding: 0 100px">
+    <div align="center" style="margin: 50px 0 10px 0!important"><h2>New Product List</h2></div>
         <table class="table table-responsive-sm table-hover table-outline mb-0">
             <thead class="thead-light">
             <tr>
@@ -112,27 +148,16 @@
                     </div>
                 </td>
                 <td class="text-center">
-                    <img src="img/flags/USA.png" alt="USA" style="height:24px;">
+                    <span>This is a sample description</span>
                 </td>
                 <td>
-                    <div class="clearfix">
-                        <div class="float-left">
-                            <strong>50%</strong>
-                        </div>
-                        <div class="float-right">
-                            <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                        </div>
-                    </div>
-                    <div class="progress progress-xs">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                    <strong> &#x20a6;570,000</strong>
                 </td>
                 <td class="text-center">
-                    <i class="fa fa-cc-mastercard" style="font-size:24px"></i>
+                    <strong>40%</strong>
                 </td>
                 <td>
-                    <div class="small text-muted">Last login</div>
-                    <strong>10 sec ago</strong>
+                    <strong>Gtext Mall</strong>
                 </td>
             </tr>
             <tr>
@@ -150,27 +175,16 @@
                     </div>
                 </td>
                 <td class="text-center">
-                    <img src="img/flags/Brazil.png" alt="Brazil" style="height:24px;">
+                    <span>This is a sample description</span>
                 </td>
                 <td>
-                    <div class="clearfix">
-                        <div class="float-left">
-                            <strong>10%</strong>
-                        </div>
-                        <div class="float-right">
-                            <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                        </div>
-                    </div>
-                    <div class="progress progress-xs">
-                        <div class="progress-bar bg-info" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                    <strong> &#x20a6;630,000</strong>
                 </td>
                 <td class="text-center">
-                    <i class="fa fa-cc-visa" style="font-size:24px"></i>
+                    <strong>23%</strong>
                 </td>
                 <td>
-                    <div class="small text-muted">Last login</div>
-                    <strong>5 minutes ago</strong>
+                    <strong>Gtext Mall</strong>
                 </td>
             </tr>
             <tr>
@@ -187,27 +201,16 @@
                     </div>
                 </td>
                 <td class="text-center">
-                    <img src="img/flags/India.png" alt="India" style="height:24px;">
+                    <span>This is a sample description</span>
                 </td>
                 <td>
-                    <div class="clearfix">
-                        <div class="float-left">
-                            <strong>74%</strong>
-                        </div>
-                        <div class="float-right">
-                            <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                        </div>
-                    </div>
-                    <div class="progress progress-xs">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 74%" aria-valuenow="74" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                    <strong> &#x20a6;560,000</strong>
                 </td>
                 <td class="text-center">
-                    <i class="fa fa-cc-stripe" style="font-size:24px"></i>
+                    <strong>23%</strong>
                 </td>
                 <td>
-                    <div class="small text-muted">Last login</div>
-                    <strong>1 hour ago</strong>
+                    <strong>Gtext Volunteer</strong>
                 </td>
             </tr>
             <tr>
@@ -224,27 +227,16 @@
                     </div>
                 </td>
                 <td class="text-center">
-                    <img src="img/flags/France.png" alt="France" style="height:24px;">
+                    <span>This is a sample description</span>
                 </td>
                 <td>
-                    <div class="clearfix">
-                        <div class="float-left">
-                            <strong>98%</strong>
-                        </div>
-                        <div class="float-right">
-                            <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                        </div>
-                    </div>
-                    <div class="progress progress-xs">
-                        <div class="progress-bar bg-danger" role="progressbar" style="width: 98%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                    <strong> &#x20a6;900,000</strong>
                 </td>
                 <td class="text-center">
-                    <i class="fa fa-paypal" style="font-size:24px"></i>
+                    <strong>50%</strong>
                 </td>
                 <td>
-                    <div class="small text-muted">Last login</div>
-                    <strong>Last month</strong>
+                    <strong>Gtext Homes</strong>
                 </td>
             </tr>
             <tr>
@@ -261,27 +253,16 @@
                     </div>
                 </td>
                 <td class="text-center">
-                    <img src="img/flags/Spain.png" alt="Spain" style="height:24px;">
+                    <span>This is a sample description</span>
                 </td>
                 <td>
-                    <div class="clearfix">
-                        <div class="float-left">
-                            <strong>22%</strong>
-                        </div>
-                        <div class="float-right">
-                            <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                        </div>
-                    </div>
-                    <div class="progress progress-xs">
-                        <div class="progress-bar bg-info" role="progressbar" style="width: 22%" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                    <strong> &#x20a6;1,000,000</strong>
                 </td>
                 <td class="text-center">
-                    <i class="fa fa-google-wallet" style="font-size:24px"></i>
+                    <strong>34%</strong>
                 </td>
                 <td>
-                    <div class="small text-muted">Last login</div>
-                    <strong>Last week</strong>
+                    <strong>Gtext Hub</strong>
                 </td>
             </tr>
             <tr>
@@ -298,27 +279,16 @@
                     </div>
                 </td>
                 <td class="text-center">
-                    <img src="img/flags/Poland.png" alt="Poland" style="height:24px;">
+                    <span>This is a sample description</span>
                 </td>
                 <td>
-                    <div class="clearfix">
-                        <div class="float-left">
-                            <strong>43%</strong>
-                        </div>
-                        <div class="float-right">
-                            <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                        </div>
-                    </div>
-                    <div class="progress progress-xs">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 43%" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                    <strong> &#x20a6;750,000</strong>
                 </td>
                 <td class="text-center">
-                    <i class="fa fa-cc-amex" style="font-size:24px"></i>
+                    <strong>53%</strong>
                 </td>
                 <td>
-                    <div class="small text-muted">Last login</div>
-                    <strong>Yesterday</strong>
+                    <strong>Gtext Media</strong>
                 </td>
             </tr>
             </tbody>

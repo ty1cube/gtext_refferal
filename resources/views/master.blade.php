@@ -77,14 +77,14 @@
     <ul class="nav navbar-nav ml-auto">
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-          <img src="img/avatars/6.jpg" class="img-avatar" alt=""><strong>{ User Full Name }</strong>
+          <img src="img/avatars/6.jpg" class="img-avatar" alt="">{{-- <strong>{{ username }}</strong> --}}
         </a>
         <div class="dropdown-menu dropdown-menu-right">
           <div class="dropdown-header text-center">
-            <strong>{ User Full Name }</strong>
+           {{--  <strong>{{ username }}</strong> --}}
           </div>
           <a class="dropdown-item" href="#"><i class="fa fa-credit-card"></i> Account Details</a>
-          <a class="dropdown-item" href="#"><i class="fa fa-shopping-cart"></i> Product</a>
+          <a class="dropdown-item" href="#"><i class="fa fa-shopping-cart"></i> Products</a>
           <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
           <a class="dropdown-item" href="#"><i class="fa fa-sign-out"></i> Logout</a>
         </div>
@@ -100,27 +100,28 @@
             Dashboard
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html"><i class="icon-speedometer"></i> Dashboard</a>
+            <a class="nav-link" href="/dashboard"><i class="icon-speedometer"></i> Dashboard</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="icon-star"></i> Find Products</a>
+            <a class="nav-link" href="/findproducts"><i class="icon-star"></i> Find Products</a>
+          </li>
+
+           <li class="nav-item">
+            <a class="nav-link" href="/newproducts"><i class="icon-star"></i> New Products</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="charts.html"><i class="icon-pie-chart"></i> Transaction History</a>
+            <a class="nav-link" href="/transaction"><i class="icon-pie-chart"></i> Transaction History</a>
+          </li
+
+  
+          <li class="nav-item">
+            <a class="nav-link" href="/userprofile"><i class="icon-pie-chart"></i> Profile</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="charts.html"><i class="icon-pie-chart"></i> Affiliate Dashboard</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="charts.html"><i class="icon-pie-chart"></i> Profile</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="charts.html"><i class="icon-pie-chart"></i> Resources</a>
+            <a class="nav-link" href="/resources"><i class="icon-pie-chart"></i> Resources</a>
           </li>
 
 

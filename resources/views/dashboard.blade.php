@@ -4,7 +4,7 @@
 
     <div class="animated fadeIn">
 
-        <h2 class="row">Top Sales</h2>
+        {{-- <h2 class="row">Top Sales</h2>
         <div class="row">
             <div class="col-sm-6 col-lg-3">
                 <div class="card text-white bg-primary">
@@ -84,14 +84,14 @@
                     </ul>
                 </div>
                 <!--/.social-box-->
-            </div>
+            </div> --}}
             <!--/.col-->
-
-            <div class="col-sm-6 col-lg-3">
+<div class="row">
+            <div class="col-sm-6 col-lg-6">
                 <div class="social-box twitter">
                     <i class="fa fa-twitter"></i>
                     <div class="chart-wrapper">
-                        <canvas id="social-box-chart-2" height="90"></canvas>
+                        <canvas id="social-box-chart-2" height="90" ></canvas>
                     </div>
                     <ul>
                         <li>
@@ -108,7 +108,28 @@
             </div>
             <!--/.col-->
 
-            <div class="col-sm-6 col-lg-3">
+            <div class="col-sm-6 col-lg-6">
+
+                <div class="social-box linkedin">
+                    <i class="fa fa-linkedin"></i>
+                    <div class="chart-wrapper">
+                        <canvas id="social-box-chart-3" height="90"></canvas>
+                    </div>
+                    <ul>
+                        <li>
+                            <strong>500+</strong>
+                            <span>contacts</span>
+                        </li>
+                        <li>
+                            <strong>292</strong>
+                            <span>feeds</span>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.social-box-->
+            </div>
+
+              <div class="col-sm-6 col-lg-6">
 
                 <div class="social-box linkedin">
                     <i class="fa fa-linkedin"></i>
@@ -130,7 +151,7 @@
             </div>
             <!--/.col-->
 
-            <div class="col-sm-6 col-lg-3">
+            <div class="col-sm-6 col-lg-6">
                 <div class="social-box google-plus">
                     <i class="fa fa-google-plus"></i>
                     <div class="chart-wrapper">
@@ -151,6 +172,7 @@
             </div>
             <!--/.col-->
         </div>
+    </div>
 </div>
 
 @endsection
